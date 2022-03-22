@@ -1,0 +1,71 @@
+
+
+
+ <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+    <!-- menu start -->
+    <div class="menu_side">
+      <div id="navbar_menu">
+        <ul class="first-ul">
+          <li> <a href="{% url 'home' %}">Home</a>
+            <ul>
+              <li><a href="{% url 'home' %}">It Home Page</a></li>
+              <li><a href="{% url 'home' %}">It Dark Home Page</a></li>
+            </ul>
+          </li>
+          <li><a href="{% url 'about' %}">About Us</a></li>
+          <li> <a href="{% url 'services' %}">Service</a>
+            <ul>
+              <li><a href="{% url 'services_list' %}">Services list</a></li>
+              <li><a href="{% url 'services_detail' %}">Services Detail</a></li>
+            </ul>
+          </li>
+          <li> <a href="{% url 'blog_list' %}">Blog</a>
+            <ul>
+              <li><a href="{% url 'blog_list' %}">Blog List</a></li>
+              <li><a href="{% url 'blog_grid' %}">Blog Grid</a></li>
+              <li><a href="{% url 'blog_detail' %}">Blog Detail</a></li>
+            </ul>
+          </li>
+          <li> <a href="#">Pages</a>
+            <ul>
+              <li><a href="{% url 'career' %}">Career</a></li>
+              <li><a href="{% url 'price' %}">Pricing</a></li>
+              <li><a href="{% url 'faq' %}">Faq</a></li>
+              <li><a href="{% url 'privacy_policy' %}">Privacy Policy</a></li>
+              <li><a href="{% url 'error' %}">Error 404</a></li>
+            </ul>
+          </li>
+          <li> <a href="{% url 'shop' %}">Shop</a>
+            <ul>
+              <li><a href="{% url 'shop' %}">Shop List</a></li>
+              <li><a href="{% url 'shop_detail' %}">Shop Detail</a></li>
+              <li><a href="{% url 'cart' %}">Shopping Cart</a></li>
+              <li><a href="{% url 'checkout' %}">Checkout</a></li>
+            </ul>
+          </li>
+          <li> <a  href="{% url 'contact' %}">Contact</a>
+            <ul>
+              <li><a href="{% url 'contact' %}">Contact Page 1</a></li>
+              <li><a href="{% url 'contact2' %}">Contact Page 2</a></li>
+            </ul>
+          </li>
+
+          {% if user.is_authenticated %}
+          <li><a href="{% url 'profile' %}">Profile</a></li>
+          <li><a href="{% url 'logoutpage' %}">Logout</a></li>
+          
+          {% else %}
+           <li><a href="{% url 'login2' %}">Login</a>
+          </li>
+          {% endif %}
+  
+  
+        </ul>
+      </div>
+      <div class="search_icon">
+        <ul>
+          <li><a href="#" data-toggle="modal" data-target="#search_bar"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- menu end -->
